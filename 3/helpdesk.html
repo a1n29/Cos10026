@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="Basic HTML form elements" />
+  <meta name="keywords" content="HTML, Form, tags" />
+  <meta name="author" content="Lab 3"  />
+  <title>CWA Help Desk Appointment</title>
+</head>
+<body>
+    <a href="https://www.swinburne.edu.au/"><img src="logo.png"></a>
+    <h1><strong>CWA Help Desk Appointment</strong></h1>
+    <p>The Help Desk is located in ATC620. Open 10:30 to 19:00 Monday to Friday<br>Check Blackboard for when CWA tutors will be there.</p>
+    <form method="post" action="http://mercury.swin.edu.au/it000000/formtest.php">
+        <fieldset>
+            <legend>Student details</legend>
+            <p><label for="studentid">Student ID</label> 
+                <input type="text" name= "studentid" id="studentid" pattern="[0-9]+" minlength="7" maxlength="10" size="10" required="required" title="7 to 10 ID number"/>
+            </p>
+            <p>
+                <label for="givenname">Given Name</label>
+                <input type="text" name="givenname" id="givenname" pattern="[A-Za-z]+" maxlength="15" size="15"  required="required" title="Only letters max 15"/>
+                <label for="familyname">Family Name</label>
+                <input type="text" name="familyname" id="familyname" pattern="[A-Za-Z]+" maxlength="15" size="15" required="required" title="Only letters max 15"/>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Your unit</legend>
+            <p> 
+                <input type="radio" id="cos10011" name="yourunit" value="cos10011" required="required"/>
+                <label for="cos10011">COS10011</label> 
+				<input type="radio" id="cos60004" name="yourunit" value="cos60004"/>
+                <label for="cos60004">COS60004</label> 
+				<input type="radio" id="cos60007" name="yourunit" value="cos60007"/>
+                <label for="cos60007">COS60007</label> 
+			</p>
+            <p><label for="yourtutor">Your Tutor</label> 
+                <select name="yourtutor" id="yourtutor">
+                    <option value="">Please Select</option>
+                    <option value="doris">Doris</option>			
+                    <option value="james">James</option>
+                    <option value="linh">Linh</option>
+                </select>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Issue</legend>
+            <p>
+                <label for="html">HTML</label>
+                <input type="checkbox" id="html" name="issue" value="html" checked>
+                <label for="css">CSS</label>
+                <input type="checkbox" id="css" name="issue" value="css" >
+                <label for="javascript">JavaScript</label>
+                <input type="checkbox" id="javascript" name="issue" value="javascript" >
+                <label for="php">PHP</label>
+                <input type="checkbox" id="php" name="issue" value="php" >
+                <label for="mysql">MySQL</label>
+                <input type="checkbox" id="mysql" name="issue" value="mysql" >
+            </p>
+            <p>
+                Description of Issue<br>
+                <label for="descriptionofissue"></label>
+                <textarea type="text" id="descriptionofissue" name="descriptionofissue" placeholder="Write description of your problem here..." rows="5" cols="30"></textarea>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Preferred Date / Time</legend>
+            <p>
+                <label for="date">Date</label>
+                <input type="text" name="date" placeholder="dd/mm/yyyy" pattern="(((0[1-9])|([12][0-9])|(3[01]))\/((0[0-9])|(1[012]))\/((20[012]\d|19\d\d)|(1\d|2[0123])))">
+                <br>
+                <label for="time">Time</label>
+                <input type="text" name="time" placeholder="00:00" pattern="^(2[0-3]|[01]?[0-9]):([1-5]{1}[0-9])$">
+            </p>
+        </fieldset>
+    <input type= "submit" value="Book"/>    
+	<input type= "reset" value="Reset Form"/>
+    </form>
+</body>

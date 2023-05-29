@@ -1,0 +1,543 @@
+/*
+	filename: The Shoesroom
+	author: The Shoesroom
+	created:16/2/2023
+	lastmodified:28/2/2023
+*/
+html {
+	font-family: 'Trebuchet MS', sans-serif, Arial; 
+}
+body {
+	background-color: rgb(237, 219, 199);
+	margin: 0;
+	animation-duration: 10s;
+    animation-iteration-count: infinite; /*moving background*/
+}
+#page {
+	width: 1000px;
+	margin: 0 auto;
+}
+@font-face {
+ font-family: 'CorbenBold';
+ src: url('fonts/corben-bold-webfont.eot');
+ src: local('?'), url('fonts/corben-bold-webfont.woff') format('woff'),  url('fonts/corben-bold-webfont.ttf') format('truetype'),  url('fonts/corben-bold-webfont.svg') format('svg');
+ font-weight: normal;
+ font-style: normal;
+}
+
+/*------------------------------ fb,ins,twitter,vimeo logo------------------------------ */
+#connect .facebook, #connect .twitter, #connect .vimeo { 
+	background: url(../images/icons.gif) no-repeat;
+}
+/*------------------------------ HEADER ------------------------------*/
+#header {
+	background: url(../images/bg-header.jpg) no-repeat center top;
+	min-height: 340px;
+	margin-bottom: 20px;
+}
+#connect {
+	text-align: left;
+	display: inline-block;
+	height: 30px;
+	width: 300px;
+	margin: 15px 0 15px 10px;
+}
+#connect a {
+	display: inline-block;
+	height: 30px;
+	margin: 0 10px;
+	padding: 0;
+}
+#connect .facebook {
+	background-position: 0 2px;
+	width: 27px;
+}
+#connect .twitter {
+	background-position: 0 -36px;
+	width: 36px;
+}
+#connect .vimeo {
+	background-position: 0 -74px;
+	width: 32px;
+}
+/*------------------------------ header css------------------------------ */
+#infos {
+	float: right;
+	color: #635320;
+	height: 30px;
+	width: 200px;
+	margin: 15px 0;
+}
+#infos a {
+	color: #635320;
+	font-family: Arial;
+	font-size: 14px;
+	line-height: 30px;
+	margin: 0 5px;
+	text-decoration: none;
+}
+/** ------------------------------ Logo ------------------------------ **/
+#logo {
+	clear: both;
+	display: block;
+	height: 217px;
+	width: 950px;
+	margin: 0 auto;
+}
+/** ------------------------------ Navigation ------------------------------ **/
+#navigation {
+	height: 40px;
+	list-style-type: none;
+	margin: 0;
+	padding: 8px 20px 12px 0;
+}
+#navigation li {
+	float: left;
+	font-family: 'CorbenBold';
+	font-size: 22px;
+	font-weight: bold;
+	line-height: 40px;
+	width: 186px;
+	text-align: center;
+}
+#navigation a {
+	color: #9d7912;
+	text-decoration: none;
+}
+#navigation a:hover, #navigation li.selected a {
+	color: #ffb443;
+	text-shadow: 1px 1px 0 #a8840b;
+}
+#navigation a:hover{
+	text-decoration: underline #ffb443;
+	transition: 0.4s ease-in-out;
+}
+/*------------------------------ CONTENTS ------------------------------*/
+#background {
+	position: relative;
+}
+/*------------------------------ moving background------------------------------ */
+#movebg {
+	position: absolute;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	background: url(../images/bg-move.png);
+	background-repeat: repeat;
+	animation: movebg 60s infinite ease-in-out;
+}
+
+@keyframes movebg {
+	0% {
+		background-position: 0% 0%;
+	}
+	100% {
+		background-position: 300% 300%;
+	}
+}
+/*------------------------------ content------------------------------ */
+h1,h2{
+	color: #ffff;
+	text-align: center;	
+	background-color: #755a0b;
+	margin-left: 25%;
+	margin-right: 25%;
+}
+#main {
+	background: url(../images/border-dashed.jpg) repeat-x left bottom;
+	margin: -20px 0 30px 0;
+	padding: 0 0 30px;
+}
+#main p {
+	color: #EDDBC7;
+	font-size: 20px;
+	line-height: 20px;
+	margin: 0;
+	padding: 0 0 20px;
+	background-color: #755a0b;
+}
+#main p a {
+	color: #755a0b;
+}
+#main address {
+	color: #ffffff;
+	font-style: normal;
+	width: 350px;
+	margin: 0 auto;
+	text-align: center;
+}
+#main address span {
+	color: #9d7912;
+	display: block;
+	font-family: 'CorbenBold';
+	font-size: 18px;
+	line-height: 20px;
+	margin: 20px 0;
+	width: 350px;
+}
+/*------------------------------ sales banner css------------------------------ */
+#adbox {
+	background: #ffffff url(../images/bottom-shadow-headliner.jpg) no-repeat center bottom;
+	height: 371px;
+	width: 935px;
+	margin: 0 auto;
+	padding: 7px 7px 22px;
+	position: relative;
+}
+#adbox img {
+	height: 371px;
+	width: 935px;
+	margin: auto;
+}
+/*------------------------------ img featured------------------------------ */
+#featured {
+	background: url(../images/border-dashed.jpg) repeat-x left bottom;
+	padding: 0 0 42px;
+	position: relative;
+}
+#featured ul {
+	display: inline-block;
+	list-style-type: none;
+	margin: 0 auto;
+	padding: 0;
+}
+#featured ul li {
+	float: left;
+	background: #ffffff url(../images/bottom-shadow-img.jpg) no-repeat center bottom;
+	height: 253px;
+	width: 204px;
+	margin-right: 28px;
+	padding: 6px 6px 15px;
+}
+#featured ul li.last {
+	margin-right: 0;
+}
+#featured ul li img {
+	border: 1px solid #e4e0d1;
+}
+#featured ul li img:hover{
+	box-shadow: 0 0 20px rgba(0,255,0, 0.6);
+	transition: 0.2s ease-in-out;
+}
+/*------------------------------ shop here button------------------------------ */
+#featured a.button {
+	background: url(../images/bg-button.jpg) no-repeat;
+	color: #8e7217;
+	display: block;
+	font-family: 'CorbenBold';
+	font-size: 18px;
+	height: 30px;
+	line-height: 30px;
+	width: 144px;
+	padding: 4px 0 6px;
+	text-align: center;
+	text-decoration: none;
+	position: absolute;
+	bottom: -20px;
+	left: 403px;
+}
+#featured a.button:hover{
+	box-shadow: 0 0 20px rgba(0, 255, 0, 0.6);
+	transition: 0.2s ease-in-out;
+}
+/*------------------------------ Shop page ------------------------------*/
+aside{
+	background-color:#755a0b;
+	float: right;
+	width: 25%;
+	border: solid #cc9f0f;
+	position: fixed;
+	top: 20%;
+	left: 74%;	
+	margin-left: 10px;
+}
+#aside_p{
+	color: #cc9f0f;
+	text-align: center;
+}
+aside:hover{
+	box-shadow: 0 0 99px rgba(0,255,0, 0.6);
+	transition: 0.2s ease-in-out;
+}
+.buy:hover{
+	border-style: solid ;
+	box-shadow: 0 0 8px rgba(0,255,0, 0.6);
+	transition: 0.2s ease-in-out;
+}
+#shop {
+	background: url(../images/border-dashed.jpg) repeat-x left bottom;
+	padding: 0 0 20px;
+	position: relative;
+}
+/*------------------------------ shop position------------------------------ */
+#shop ul.items {
+	display: inline-block;
+	list-style-type: none;
+	margin: 0 auto 16px;
+	padding: 0;
+}
+#shop ul.items li {
+	float: left;
+	color: #8f6f05;
+	height: 340px;
+	width: 216px;
+	margin-bottom: 30px;
+	margin-right: 28px;
+	background-color: #EDDBC7;
+}
+#shop ul.items li span {
+	background: #ffffff url(../images/bottom-shadow-img.jpg) no-repeat center bottom;
+	display: block;
+	height: 253px;
+	width: 204px;
+	margin-bottom: 10px;
+	padding: 6px 6px 14px;
+}
+#shop ul.items li span img {
+	border: 1px solid ;
+}
+/*------------------------------ buy button animation------------------------------ */
+#shop ul.items li span.price {
+	float: right;
+	background: none;
+	color: #85586F;
+	font-size: 17px;
+	height: 20px;
+	line-height: 20px;
+	width: 80px;
+	margin: 0;
+	padding: 0;
+	text-align: right;
+}
+#shop ul.items li a.buy {
+	background-color: #F7C8E0 ;
+	color: #8f6f05;
+	display: block;
+	font-family: 'CorbenBold';
+	font-size: 14px;
+	height: 20px;
+	line-height: 20px;
+	width: 80px;
+	border-radius: 3px;
+	margin: 13px auto 0;
+	padding: 1px 0 4px;
+	text-align: center;
+	text-decoration: none;
+}
+#shop ul.items li.last {
+	margin-right: 0;
+}
+#shop span.shoe_img:hover{
+	box-shadow: 0 0 8px rgb(255, 166, 0);
+	transition: 0.6s ease-in-out;
+}
+.shoe_img{
+    width:300px;
+    height:auto;
+    display:inline-block;
+    position:relative;
+    transition:.3s;
+    margin:4px;
+	font-size: 15px;
+  }
+/*------------------------------ pics animation------------------------------*/
+.shoe_img {
+    width:100%;
+    height:100%;
+    transition: 3s;
+    border-radius:4px;
+}
+/*blur animation*/  
+.shoe_img:hover img{
+    filter:blur(2px) brightness(60%);
+    box-shadow:0 0 16px cyan;
+}
+.shoe_img :not(img){
+    position:absolute;
+    z-index:1;
+    top: 15%;
+    width:100%;
+    text-align:center;
+    color:#fff;
+    opacity:0;
+    transition:.3s;
+	font-size: 19px;
+}
+.shoe_img:hover :not(img){
+    opacity:1;
+}
+/*------------------------------ Enquire Page ------------------------------*/ 
+#enquires {
+	background: url(../images/border-dashed.jpg) repeat-x left bottom;
+	padding: 0 0 20px;
+	position: relative;
+}
+#enquire_pics ul {
+	display: inline-block;
+	list-style-type: none;
+	margin: 0 auto;
+	padding-left:  30px; 
+}
+#enquire_pics ul li {
+	background: #ffffff url(../images/bottom-shadow-img.jpg) no-repeat center bottom;
+	height: 205px;
+	width: 204px;
+}
+#enquire_pics ul li img {
+	border: 2px solid orange;
+}
+#enquire_pics ul li:hover{
+	box-shadow: 0 0 20px rgba(0, 255, 0, 0.6);
+	transition: 0.2s ease-in-out;
+}
+#enquire_heading{
+	color: orange ;
+	font-size: 3em;
+	text-align: center;
+}
+#enquire_p{
+	color: orange;
+	font-size: 2em;
+	text-align: center;
+}
+#main_fieldset{
+	background-color: rgb(237, 219, 199);
+	border-style: solid ;
+	position: relative;
+	text-align: center;
+	display: inline;
+	float: left;
+	color: rgb(128, 99, 68)
+}
+#enquire_fieldset{
+	background-color: #e4e0d1;
+	border-style: solid;
+}
+#main_fieldset:hover {
+	box-shadow: 0 0 100px rgba(187, 255, 0, 0.6);
+	transition: 0.6s ease-in-out;
+}
+ #enquire_fieldset:hover {
+	box-shadow: 0 0 100px rgba(255, 166, 0, 0.6);
+	transition: 0.6s ease-in-out;
+ }
+/*------------------------------ Contact Us Page ------------------------------*/
+/*------------------------------ profile pic------------------------------ */
+.pfp{
+	border: double 20px lightpink ;
+	float: right;
+	max-width: 200px;
+	display:block;
+	clear:both;
+	transition: 1.5s ease-out;
+}
+.pfp:hover{
+	border-color: lightyellow;
+	box-shadow: 0 0 100px lightgreen;
+}
+.table,td,th {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid lightcoral;
+  text-align: center;
+  background-color: #fafad2;
+}
+#info_haianh{
+	color: lightcoral;
+	padding-top: 10%;
+	font-size: 25px;
+}
+#info_dung {
+	color: rgb(29, 156, 235);
+	padding-top: 10%;
+	font-size: 25px;
+}
+#info_binh {
+	color: rgb(253, 136, 154);
+	padding-top: 10%;
+	font-size: 25px;
+}
+#info_duc {
+	color: lightsalmon;
+	padding-top: 10%;
+	font-size: 25px;
+}
+.info_fieldset {
+	margin: 20px;
+	border-style: solid  ;
+	border-color: orange;
+	color: orange;
+	text-align: center;
+	background-color: #EDDBC7 ;
+}
+
+/*------------------------------ FOOTER ------------------------------*/
+#footer {
+	padding: 0 5px;
+	width: 100%;
+	margin-bottom: -100px;
+}
+#description {
+	background: url(../images/border-dashed.jpg) repeat-x left bottom;
+	margin: 0 0 30px;
+	padding: 0 0 30px;
+}
+#description div {
+	float: left;
+	width: 180px;
+	margin-right: 50px;
+}
+#description div a.logo {
+	background: url(../images/logo.jpg) no-repeat;
+	display: block;
+	height: 115px;
+	width: 115px;
+	margin: 0 0 10px;
+	margin-top: -25px;
+}
+#description div span {
+	color: #9d7912;
+	display: block;
+	font-size: 11px;
+	line-height: 20px;
+}
+#description div span a {
+	color: #9d7912;
+	text-decoration: none;
+}
+#description p {
+	color: #EDDBC7;
+	font-size: 13px;
+	line-height: 20px;
+	margin: 30px 0 10px;
+	text-align:center;
+	background-color: #755a0b;
+}
+#description p a {
+	color: #9d7912;
+}
+#footer div.navigation {
+	font-size: 14px;
+	line-height: 20px;
+	width: 400px;
+	margin: 0 auto;
+	text-shadow: 0 1px 0 #af9e31;
+}
+#footer div.navigation a {
+	color: #755a0b;
+	padding: 0 15px;
+	text-decoration: none;
+	text-shadow: 1px 1px 0 #af9e31;
+}
+#footer div.navigation a:hover {
+	color: #ffbb00;
+	box-shadow: 0 0 10px rgba(255, 230, 0, 0.6);
+	background-color: rgb(255, 230, 0, 0.6) ;
+	transition: 0.6s ease-in-out;
+}
+#description div a.logo:hover {
+	box-shadow: 0 0 20px rgba(251, 255, 0, 0.6);
+	transition: 0.2s ease-in-out;
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Sellcouth | enquire</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+  <div id="background">
+    <div id="movebg"></div>
+    <div id="page">
+      <div id="header">
+        <span id="connect"><a href="#" class="facebook"></a> <a href="#" class="twitter"></a> <a href="#" class="vimeo"></a></span> <span id="infos"><a href="#">View Bags</a>|<a href="#">Checkout</a></span> <a href="index.html" id="logo"></a>
+        <ul id="navigation">
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="about.html">About</a>
+          </li>
+          <li>
+            <a href="product.html">Shop</a>
+          </li>
+          <li class="selected">
+            <a href="enquire.html">Enquire</a>
+          </li>
+          <li>
+            <a href="contact-us.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div id="contents">
+        <div id="main"></div>
+        <div id="adbox"><img src="images/sale_2.jpg" alt="sale_2"></div>
+        <div id="enquire">
+          <h1 id="enquire_heading">Enquire</h1>
+          <p id="enquire_p">Please enter your information which you wish to know</p>
+          <div id="enquire_featured">
+            <form method="post" action="http://mercury.swin.edu.au/it000000/formtest.php">
+              <fieldset id="main_fieldset">
+                <legend>Personal information</legend>
+                <p id="content_fieldset"></p>
+                <p id="enquire_name"><label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="fname" maxlength="25" size="25" pattern="[a-zA-Z ]+$" required="required"><br>
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" name="lname" maxlength="25" size="25" pattern="[a-zA-Z ]+$" required="required"><br>
+                <label for="email">Email</label><br>
+                <input type="email" id="email" name="email" size="30" required="required"></p>
+                <fieldset id="enquire_fieldset">
+                  <label for="street">Street address:</label><br>
+                  <input type="text" id="street" name="street" maxlength="40" size="40" pattern="[a-zA-Z ]+$" required="required"><br>
+                  <label for="suburb">Suburb/town:</label><br>
+                  <input type="text" id="suburb" name="suburb" maxlength="20" size="20" pattern="[a-zA-Z ]+$" required="required"><br>
+                  <label for="state">State</label><br>
+                  <select name="state" id="state" required="required">
+                    <option value="">
+                      Please select a state
+                    </option>
+                    <option value="VIC">
+                      VIC
+                    </option>
+                    <option value="NSW">
+                      NSW
+                    </option>
+                    <option value="QLD">
+                      QLD
+                    </option>
+                    <option value="NT">
+                      NT
+                    </option>
+                    <option value="WA">
+                      WA
+                    </option>
+                    <option value="SA">
+                      SA
+                    </option>
+                    <option value="TAS">
+                      TAS
+                    </option>
+                    <option value="ACT">
+                      ACT
+                    </option>
+                  </select><br>
+                  <label for="postcode">Postcode</label><br>
+                  <input type="text" id="postcode" name="postcode" maxlength="4" size="4" pattern="\d{4}" required="required"><br>
+                </fieldset><br>
+                <label for="phone">Phone number</label><br>
+                <input type="text" id="phone" name="phone" maxlength="10" size="25" pattern="\d{10}" required="required" placeholder="Please enter your phone number"><br>
+                Preferred contact:<br>
+                <label><input type="radio" name="preferred_contact" value="email" checked="checked"> Email</label> <label><input type="radio" name="preferred_contact" value="post">Post</label> <label><input type="radio" name="preferred_contact" value="phone">Phone</label><br>
+                <select name="enquire_product" id="enquire_product" required="required">
+                  <option value="">
+                    Please select a product
+                  </option>
+                  <option value="A6T012">
+                    TRACK 6 I.S.E.E - PURE WHITE/ICY BLUE
+                  </option>
+                  <option value="A6T008">
+                    TRACK 6 UTILITY GUM SOLE - LOW TOP - NAVY PEONY/GUM
+                  </option>
+                  <option value="AV00176">
+                    VINTAS LANDFORMS - LOW TOP - RAIN DRUM
+                  </option>
+                  <option value="AV00152">
+                    BASAS WORKDAY - HIGH TOP - BLACK
+                  </option>
+                  <option value="ALP2022">
+                    URBAS LOVE+ 22 - HIGH TOP - RUSTIC
+                  </option>
+                  <option value="AV00196">
+                    URBAS SC - MULE - DUSTY BLUE
+                  </option>
+                </select><br>
+                <p>Things you want to know about our shoes<br>
+                <label><input type="checkbox" name="enquire_tickbox" value="size" checked>Size</label> <label><input type="checkbox" name="enquire_tickbox" value="price">Price</label> <label><input type="checkbox" name="enquire_tickbox" value="colors">Colors</label> <label><input type="checkbox" name="enquire_tickbox" value="upper">Upper</label> <label><input type="checkbox" name="enquire_tickbox" value="outsole">Outsole</label> <label><input type="checkbox" name="enquire_tickbox" value="gender">Gender</label></p>
+                <p><label>Comments</label><br>
+                <textarea name="comments" rows="4" cols="20" placeholder="Particular aspect you are interested in"></textarea></p><input type="submit" value="Book"> <input type="reset" value="Reset Form">
+              </fieldset>
+            </form><br>
+            <div id="enquire_pics">
+              <ul>
+                <li><img src="images/shoes1.jpg" alt="shoes1"></li>
+                <li><img src="images/shoes2.jpg" alt="shoes2"></li>
+                <li><img src="images/shoes3.jpg" alt="shoes3"></li>
+              </ul>
+              <ul>
+                <li><img src="images/shoes4a.jpg" alt="shoes4a"></li>
+                <li><img src="images/shoes5a.jpg" alt="shoes5a"></li>
+                <li><img src="images/shoes6a.jpg" alt="shoes6a"></li>
+              </ul>
+            </div><br>
+            <br>
+            <br>
+          </div>
+        </div>
+      </div><!-- /#contents -->
+      <div id="footer">
+        <div id="description">
+          <div>
+            <a href="index.html" class="logo"></a>
+          </div>
+          <p>We're The Shoesroom from class COS10026.2 at Swinburne University. My team has 4 members who are Tran Hoang Hai Anh, Nguyen Tuan Duc, Nguyen Manh Dung and Nguyen Tran Yen Binh. Our group decided to create a web selling shoes. We built this website to provide customers another option for a shoes sale website since there is a high demand for the footwear business and there are now only a few websites selling shoes worldwide.</p>
+        </div>
+        <div class="navigation">
+          <a href="index.html">Home</a>| <a href="about.html">About</a>|  <a href="product.html">Shop</a>| <a href="enquire.html">Enquire</a>|<a href="contact-us.html">Contact</a>
+        </div>
+      </div><!-- /#footer -->
+    </div><!-- /#page -->
+  </div><!-- /#background -->
+</body>
+</html>
